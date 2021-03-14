@@ -33,7 +33,7 @@ const serverRendering = (req, res, next) => {
   });
 };
 
-route.use("^/$", serverRendering);
+route.use("^/[a-z]+$", serverRendering);
 
 route.use(express.static(path.resolve(__dirname, "..", "build")));
 
