@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export function Contact(props) {
-    return (
-        <div>Contact Page</div>
-    )
+  return <div>This Contact Page</div>;
 }
