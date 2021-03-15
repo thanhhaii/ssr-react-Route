@@ -17,18 +17,15 @@ const serverRendering = (req, res, next) => {
       return res.status(500).send("Error, please check !!");
     }
 
-    const context = {}
+    const context = {};
     const app = ReactDOMServer.renderToString(
-      <StaticRouter location={req.url} context={context}>
-        <App/>
+      <StaticRouter location={req.originalUrl} context={context}>
+        <App />
       </StaticRouter>
-    )
+    );
 
-    return res.send(
-      data.replace(
-        '<div id="root"></div>',
-        `<div id="root">${app}</div>`
-      )
+    res.send(
+      data.replace('<div id="root"></div>', `<div id="root">${app}</div>`)
     );
   });
 };

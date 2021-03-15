@@ -9,13 +9,13 @@ export function RootRouter() {
     <Switch>
       <Route exact path="/">
         <Home />
-      </Route>
+      </Route>{" "}
       <Route path="/dashboard">
         <Dashboard />
-      </Route>
+      </Route>{" "}
       <Route path="/contact">
         <Contact />
-      </Route>
+      </Route>{" "}
     </Switch>
   );
 }

@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export function Dashboard(props) {
-    return (
-        <div>Dashboard Page</div>
-    )
+  return <div>This is Dashboard Page</div>;
 }
